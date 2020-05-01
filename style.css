@@ -1,10 +1,72 @@
 /* nejsme vcerejsi, pouzivame moderni box model */
-html { box-sizing: border-box; }
-*, :after, :before { box-sizing: inherit; }
+html {
+  box-sizing: border-box;
+}
+*,
+:after,
+:before {
+  box-sizing: inherit;
+}
 
 body {
-	font-family: sans-serif;
-	font-size: 14px;
+  font-family: sans-serif;
+  font-size: 14px;
 }
 
 /* ---------------------------------------------------- */
+
+body {
+	text-align: center;
+}
+
+img {
+  border-radius: 50%;
+}
+
+.kontejner {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.osoba {
+	border: 1px solid lightgray;
+	border-radius: 3%;
+	padding: 1rem;
+	margin: 0.6rem;
+  display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+@media screen and (max-width: 540px) {
+	.osoba {
+		width: 100%;
+			}
+	img {
+		max-width: 100%;
+	}
+}
+
+@media screen and (min-width: 541px) and (max-width: 960px) {
+	.osoba {
+		width: 45%;
+		}
+	.img {
+		align-self: center;
+		width: 40%;
+		}
+		img{
+			width: 100%;
+		}
+	.text{
+		width: 60%;
+		text-align: left;
+		padding-left: 1rem;
+	}
+}
+
+@media screen and (min-width: 961px) {
+	.osoba {
+		width: 22%;
+			}
+}

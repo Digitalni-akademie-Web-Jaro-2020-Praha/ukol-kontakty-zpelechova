@@ -20,7 +20,7 @@ body {
 }
 
 img {
-  border-radius: 50%;
+  border-radius: 100px;
 }
 
 .kontejner {
@@ -38,27 +38,15 @@ img {
 	justify-content: center;
 }
 
-@media screen and (max-width: 540px) {
-	.osoba {
-		width: 100%;
-			}
-	img {
-		max-width: 100%;
-	}
-}
-
 @media screen and (min-width: 541px) and (max-width: 960px) {
 	.osoba {
 		width: 45%;
 		}
-	.img {
+	img {
 		align-self: center;
-		width: 40%;
+		width: 100%;
 		}
-		img{
-			width: 100%;
-		}
-	.text{
+		.text{
 		width: 60%;
 		text-align: left;
 		padding-left: 1rem;
@@ -67,6 +55,9 @@ img {
 
 @media screen and (min-width: 961px) {
 	.osoba {
-		width: 22%;
+		flex-grow: 1;
+			}
+			.kontejner{
+				flex-wrap: nowrap;
 			}
 }
